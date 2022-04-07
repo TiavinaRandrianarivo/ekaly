@@ -10,6 +10,18 @@ var utilisateursModel=mongoose.model(
         }, 
         role:{
             type:String
+        },
+        nom:{
+            type:String
+        },
+        mail:{
+            type:String
+        },
+        phone:{
+            type:String
+        },
+        etat:{
+            type:String
         }
     },
     "utilisateurs"
