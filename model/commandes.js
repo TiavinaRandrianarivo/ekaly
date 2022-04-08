@@ -2,11 +2,20 @@ var mongoose=require("mongoose");
 var commandesModel=mongoose.model(
     "ekaly",
     {
-        idClient:{
+        idUtilisateur:{
             type:String
         },
-        DateHeureCommande:{
+        dateHeureCommande:{
             type:Date
+        },
+        dateHeureLivraison:{
+            type:Date
+        },
+        adresseLivraison:{
+            type:String
+        },
+        etat:{
+            type:String
         }
     },
     "commandes"

@@ -4,6 +4,24 @@ var platsModel=mongoose.model(
     {
         nom:{
             type:String
+        },
+        image:{
+        	type:String
+        },
+        prixDAchat:{
+        	type:Number
+        },
+        prixDeVenteRestaurant:{
+        	type:Number
+        },
+        prixDeVenteEkaly:{
+        	type:Number
+        },
+        idUtilisateur:{
+        	type:String
+        },
+        etat:{
+        	type:String
         }
     },
     "plats"

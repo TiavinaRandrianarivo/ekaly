@@ -50,7 +50,7 @@ routeur.post('/inscription',(req,res)=>{
     var mail = req.body.mail;
     var phone = req.body.phone;
     var etat = req.body.etat;
-    if(identification==""|| identification==null || motdepasse=="" || motdepasse==null || role == "" || role == null || nom=="" || nom==null || mail=="" || mail==null || phone=="" || phone==null)
+    if(identification=="" || motdepasse=="" || role == "" || nom=="" || mail=="" || phone=="")
     {
         res.status(400).send("There is an empty field");
     }
@@ -64,7 +64,7 @@ routeur.post('/inscription',(req,res)=>{
             }
             else
             {
-                bcrypt.hash(motdepasse, 5,function(error,result){
+                bcrypt.hash(motdepasse, 5,function(err,result){
                     newUtilisateur = new utilisateurs({
                         identification: identification,
                         motdepasse: result,
