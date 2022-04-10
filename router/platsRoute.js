@@ -28,13 +28,13 @@ routeur.post('/insertproduct',(req,res)=>{
         res.status(400).send("There is an empty field");
     }else{
         const newRecord=new plats({
-        nom: nom;
-        image: image;
-        prixDAchat: prixDAchat;
-        prixDeVenteRestaurant: prixDeVenteRestaurant;
-        prixDeVenteEkaly: prixDeVenteEkaly;
-        idUtilisateur: idUtilisateur;
-        etat: etat;
+        nom: nom,
+        image: image,
+        prixDAchat: prixDAchat,
+        prixDeVenteRestaurant: prixDeVenteRestaurant,
+        prixDeVenteEkaly: prixDeVenteEkaly,
+        idUtilisateur: idUtilisateur,
+        etat: etat
         });
         newRecord.save();
         res.status(200).send("Your new product is registered");

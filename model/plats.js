@@ -1,6 +1,6 @@
 var mongoose=require("mongoose");
 var platsModel=mongoose.model(
-    "ekaly",
+    "plats",
     {
         nom:{
             type:String
@@ -23,8 +23,7 @@ var platsModel=mongoose.model(
         etat:{
         	type:String
         }
-    },
-    "plats"
+    }
 );
 
 module.exports=platsModel;

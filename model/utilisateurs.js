@@ -1,6 +1,6 @@
 var mongoose=require("mongoose");
 var utilisateursModel=mongoose.model(
-    "ekaly",
+    "utilisateurs",
     {
         identification:{
             type:String
@@ -23,8 +23,7 @@ var utilisateursModel=mongoose.model(
         etat:{
             type:String
         }
-    },
-    "utilisateurs"
+    }
 );
 
 module.exports=utilisateursModel;
