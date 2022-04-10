@@ -1,6 +1,6 @@
 var mongoose=require("mongoose");
 var commandesModel=mongoose.model(
-    "ekaly",
+    "commandes",
     {
         idUtilisateur:{
             type:String
@@ -17,8 +17,8 @@ var commandesModel=mongoose.model(
         etat:{
             type:String
         }
-    },
-    "commandes"
+    }
+    
 );
 
 module.exports=commandesModel;

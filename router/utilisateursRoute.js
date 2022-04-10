@@ -8,13 +8,13 @@ const ObjectID=require('mongoose').Types.ObjectId;
 routeur.post('/login',(req,res)=>{
     var identification = req.body.identification;
     var motdepasse = req.body.motdepasse;
-    if(identification==null && motdepasse==null){
+    if(identification=="" && motdepasse==""){
         res.status(400).send("Identification and password is empty");
     }
-    else if(identification || motdepasse==null){
+    else if(identification && motdepasse==""){
         res.status(400).send("Password is empty");
     }
-    else if(identification==null || motdepasse){
+    else if(identification=="" && motdepasse){
         res.status(400).send("Identification is empty");
     }
     else{
@@ -26,7 +26,7 @@ routeur.post('/login',(req,res)=>{
                 {
                     if(result)
                     {
-                        return userFound;
+                        res.status(200).send(userFound);
                     }
                     else
                     {

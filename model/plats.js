@@ -5,9 +5,6 @@ var platsModel=mongoose.model(
         nom:{
             type:String
         },
-        image:{
-        	type:String
-        },
         prixDAchat:{
         	type:Number
         },

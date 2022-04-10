@@ -18,7 +18,6 @@ routeur.get('/list/:idUtilisateur/:etat', (req, res) => {
 
 routeur.post('/insertproduct',(req,res)=>{
     var nom = req.body.nom;
-    var image = req.body.image;
     var prixDAchat = req.body.prixDAchat;
     var prixDeVenteRestaurant = req.body.prixDeVenteRestaurant;
     var prixDeVenteEkaly = req.body.prixDeVenteEkaly;
@@ -29,7 +28,6 @@ routeur.post('/insertproduct',(req,res)=>{
     }else{
         const newRecord=new plats({
         nom: nom,
-        image: image,
         prixDAchat: prixDAchat,
         prixDeVenteRestaurant: prixDeVenteRestaurant,
         prixDeVenteEkaly: prixDeVenteEkaly,

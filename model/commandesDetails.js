@@ -1,6 +1,6 @@
 var mongoose=require("mongoose");
 var commandesDetailsModel=mongoose.model(
-    "ekaly",
+    "commandesDetails",
     {
         idCommande:{
             type:String
@@ -11,8 +11,8 @@ var commandesDetailsModel=mongoose.model(
         quantite:{
             type:Number
         }
-    },
-    "commandesDetails"
+    }
+    
 );
 
 module.exports=commandesDetailsModel;
